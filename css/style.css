@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&family=Gupter:wght@400;500;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bg-color);
+}
+:root {
+  --bg-color: #eeedef;
+  --common-color: #cc030b;
+  --red-text: red;
+  --grey-text: #707070;
+  --color-black: black;
+}
+::selection {
+  background-color: var(
+    --red-text
+  ); /* Change the background color of the selected text */
+  color: rgb(228, 227, 227); /* Change the text color of the selected text */
+}
+
+/* general style */
+.small-header {
+  font-weight: 300;
+  text-align: center;
+  margin: 10px 0;
+  font-size: 15px;
+  color: var(--grey-text);
+}
+
+.head .red-word,
+.head p {
+  font-size: 30px;
+  text-align: center;
+  padding: 20px 0;
+  font-weight: bold;
+}
+.red-word {
+  color: var(--red-text);
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.294);
+  padding: 0 96px;
+}
+/* the parent of all header-items */
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+/* fot the  logo text header style */
+.header-title a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--color-black);
+}
+#header-content .header-title {
+  padding: 25px 20px;
+}
+/* for the dot header style */
+.header-dot {
+  color: var(--common-color);
+  font-size: 30px;
+  line-height: 10px;
+}
+/* all nav-item styles*/
+.nav-tools {
+  padding: 10px 0;
+}
+.nav-tools ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 20px;
+}
+.nav-tools a {
+  font-size: 18px;
+  color: rgba(183, 183, 183, 0.502);
+  text-decoration: none;
+  position: relative; /*we add position:relative to the element itself*/
+}
+/* for dark icon style */
+.dark-icon {
+  font-size: 25px;
+  padding: 20px 30px 20px 0;
+}
+/* to remove the check-box square */
+.dark-icon input {
+  display: none;
+}
+.nav-tools li a:hover {
+  color: var(--color-black);
+}
+.nav-tools li a::after {
+  /* We apply the after pseudo-element on the anchor because it directly applies to the element itself */
+  content: "";
+  /* We typically use this with the after and before pseudo-elements */
+  width: 0;
+  /* I need to set it to 0 width so it starts hidden and only appears when I hover */
+  height: 5px;
+  background-color: var(--red-text);
+  position: absolute;
+  /* We allow it to move relative to the anchor element itself */
+  bottom: -6px;
+  /* This positions it slightly below the text so it doesn't stick directly underneath */
+  left: 50%;
+  transform: translate(-50%, 0);
+  /* This aligns it to the left so it's directly underneath the text */
+  transition: width ease 0.3s;
+  /* This enables a transition on the width, so when we hover, it smoothly changes */
+}
+.nav-tools li:hover a::after {
+  width: 60px;
+  border-radius: 3px;
+}
+
+#intro {
+  display: flex;
+  justify-content: space-between;
+  margin: 00050px;
+}
+.right-side .img {
+  width: 450px;
+}
+.right-side .img img {
+  width: 100%;
+}
+.text-content {
+  width: 500px;
+}
+.text-content h2 {
+  font-size: 65px;
+  text-transform: capitalize;
+}
+.text-content p {
+  color: var(--grey-text);
+  margin: 25px 0;
+}
+
+.btn button {
+  width: 120px;
+  border-radius: 0px 15px 15px 15px;
+  font-size: 18px;
+  padding: 8px 10px;
+  background-color: var(--common-color);
+  border: var(--common-color);
+  color: white;
+}
+button:hover {
+  background-color: #f51b22;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.bt-2 {
+  border: 0;
+  text-decoration: none;
+  border-radius: 7rem;
+  background: transparent;
+  transition: 0.5s;
+  font-weight: 800;
+  font-size: 1rem;
+  color: black;
+  padding: 8px 8px;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    var(--common-color) 0 16%,
+    transparent 16% 100%
+  );
+}
+.bt-2 .icon {
+  font-size: 1rem;
+  margin-right: 1.5rem;
+  background-color: #ffffff;
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  border-radius: 100%;
+}
+.bt-2 .icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bt-2:hover {
+  color: var(--red-text);
+}
+
+/* for section 2 bg */
+#chefs-info {
+  background-color: white;
+}
+
+.cards {
+  display: flex;
+  padding-bottom: 50px;
+  /*To add spacing between the cards and the new section.*/
+}
+/* styles of header */
+.text-head {
+  font-size: 30px;
+  padding: 10px 0 25px;
+  text-align: center;
+}
+
+/* for the card text style */
+.head-card {
+  font-size: 15px;
+  padding: 8px 0;
+}
+.head-card h2,
+h3 {
+  text-align: center;
+}
+.head-card h3 {
+  padding: 5px 0;
+  color: var(--grey-text);
+}
+.p-card {
+  text-align: center;
+  color: var(--grey-text);
+  padding: 0 15px 10px;
+}
+
+.card {
+  width: calc(100% / 3);
+  margin: 000 30px;
+  box-shadow: 1px 10px 8px rgba(0, 0, 0, 0.576);
+  transition: transform 0.5s ease; /* Smoothly animates the scale transform */
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden; /*hide icons when they get out of the card*/
+}
+.card:hover {
+  transform: scale(1.1, 1.1); /* Scales the card when hovered */
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.card .imgs {
+  position: relative; /*the parent of .shape (img)*/
+}
+.card .shape {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+/* Icon styling on cards */
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: end; /* Aligns items to the end */
+  position: absolute;
+  z-index: 100; /* Places icons above other elements */
+  top: 10%;
+  left: 120%;
+  background-color: rgba(242, 242, 242, 0.534);
+  color: var(--grey-text);
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+  list-style: none;
+  transition-delay: 0.25s;
+  transition-duration: 0.5s;
+}
+.card:hover .icons {
+  left: 85%; /* Moves icons into view when card is hovered */
+}
+
+.container .gallery-photo {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 6rem;
+}
+.rows {
+  display: flex;
+  flex-direction: column;
+  width: 33.333%;
+  gap: 20px;
+}
+
+.container .gallery-photo picture {
+  border: #ffffff solid 4px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.container .gallery-photo .rows img,
+.rows-3 img {
+  width: 100%;
+  transition: 0.5s;
+}
+.container .gallery-photo:hover img {
+  scale: 1.1 1.1;
+}
+.container .gallery-photo .content-photo h3 {
+  width: 100%;
+}
+.container .gallery-photo .content-photo {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  top: 120%;
+  transition: all 0.5s;
+}
+.container .gallery-photo picture:hover .content-photo {
+  top: 0;
+}
+.btn-to-top {
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  color: white;
+  display: none;
+  background-color: var(--common-color);
+  border: none;
+  border-radius: 100%;
+  margin: 20px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 50000;
+}
